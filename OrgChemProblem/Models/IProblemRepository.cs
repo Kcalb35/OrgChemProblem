@@ -10,5 +10,7 @@ namespace OrgChemProblem.Models
         Task<Problem> UpdateProblemAsync(Problem updatedProblem);
         Task DeleteProblemByIdAsync(int id);
         Task<Problem> CreateProblemAsync(Problem problem);
+        Task<int> GetCount();
+
     }
 }

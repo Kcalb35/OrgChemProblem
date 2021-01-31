@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 using OrgChemProblem.Exceptions;
 
 namespace OrgChemProblem.Models
@@ -54,5 +55,11 @@ namespace OrgChemProblem.Models
             await _Context.SaveChangesAsync();
             return problem;
         }
+
+        public async Task<int> GetCount()
+        {
+            return await _Context.Problems.CountAsync();
+        }
+
     }
 }

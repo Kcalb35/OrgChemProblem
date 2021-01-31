@@ -34,8 +34,8 @@ namespace OrgChemProblem.Utils
 
         public static double TagSim(IEnumerable<string> target, IEnumerable<string> query)
         {
-            int count = query.Count();
-            int sameCount = query.Count(tag => target.Contains(tag));
+            var count = query.Count();
+            var sameCount = query.Count(tag => target.Contains(tag));
             return 1.0 * sameCount / count;
         }
 
